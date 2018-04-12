@@ -1,4 +1,4 @@
-# NEWBIES -> HOW TO BE HAPPY
+# AWESOME tools & tips
 
 ## install vscode
 
