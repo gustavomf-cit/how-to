@@ -117,3 +117,5 @@ machine:~/github/how-to$ cat ~/.vscode/templates/\{__name__.python\}.py
 # @Date   : {__date__}
 machine:~/github/how-to$
 ```
+
+![peek + template generator](./images/using_template.gif)
