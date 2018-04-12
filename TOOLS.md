@@ -86,6 +86,10 @@ code --install-extension eamodio.gitlens
 code --install-extension DengSir.template-generator-vscode
 ```
 
+## install sonar by command line, it will install jars dependences automatically
+
+![peek + sonar](./images/sonar.gif)
+
 ## vscode key bind example for generate def docs ... google style
 
 keybindings.json
@@ -98,6 +102,8 @@ keybindings.json
     }
 ]
 ```
+
+![peek + sonar](./images/using_template.gif)
 
 ## template generator
 
