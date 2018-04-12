@@ -15,6 +15,7 @@ sudo apt-get install -y code
 ```bass
 sudo apt install -y python3 python3-dev python3-pip
 sudo apt install -y freetds-dev freetds-bin freetds-common
+sudo apt install -y openjdk-8-jdk openjdk-8-jre
 sudo pip3 install yapf autopep8 pylint flake8
 sudo pip3 install pytest pytest-cov requests python-dateutil
 sudo pip3 install python-tds pymssql ujson
