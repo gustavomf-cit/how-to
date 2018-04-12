@@ -1,10 +1,18 @@
 # AWESOME tools & tips
 
+## use peek for screen recorder to gif
+
+```bash
+sudo add-apt-repository ppa:peek-developers/stable
+sudo apt update
+sudo apt install peek
+```
+
 ## install vscode
 
 ```bash
 sudo apt-get update -y
-sudo apt-get install -y curl
+sudo apt-get install -y curl git
 curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > microsoft.gpg
 sudo mv microsoft.gpg /etc/apt/trusted.gpg.d/microsoft.gpg
 sudo sh -c 'echo "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main" > /etc/apt/sources.list.d/vscode.list'
@@ -75,7 +83,7 @@ code --install-extension azaugg.vscode-python-docstring
 code --install-extension DotJoshJohnson.xml
 code --install-extension codezombiech.gitignore
 code --install-extension eamodio.gitlens
-
+code --install-extension DengSir.template-generator-vscode
 ```
 
 ## vscode key bind example for generate def docs ... google style
@@ -89,4 +97,23 @@ keybindings.json
         "command": "extension.addPyDocstring"
     }
 ]
+```
+
+## template generator
+
+To create file with template
+type: alt+control+n
+write field: the name of file or folder
+option: choose python.py or anything else
+
+```bash
+machine:~/github/how-to$ cat ~/.vscode/templates/\{__name__.python\}.py
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+#
+# {__name__}.py
+# @Author : {__author__} ({__email__})
+# @Link   : {__link__}
+# @Date   : {__date__}
+machine:~/github/how-to$
 ```
