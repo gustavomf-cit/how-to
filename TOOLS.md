@@ -5,7 +5,16 @@
 ```bash
 sudo add-apt-repository ppa:peek-developers/stable
 sudo apt update
-sudo apt install peek
+sudo apt install -y peek
+```
+
+## install snyk for security
+
+```bash
+sudo apt install -y npm
+npm install -g snyk
+cd ~/projects/myproj/
+snyk test
 ```
 
 ## install vscode
