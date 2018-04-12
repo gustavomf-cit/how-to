@@ -20,8 +20,8 @@ machine:~/project$ snyk test
 Please run `pip install -r requirements.txt`
 
 machine:~/project$ sudo pip2 install -r requirements.txt
-The directory '/home/CIT/gustavomf/.cache/pip/http' or its parent directory is not owned by the current user and the cache has been disabled. Please check the permissions and owner of that directory. If executing pip with sudo, you may want sudo's -H flag.
-The directory '/home/CIT/gustavomf/.cache/pip' or its parent directory is not owned by the current user and caching wheels has been disabled. check the permissions and owner of that directory. If executing pip with sudo, you may want sudo's -H flag.
+The directory '~/.cache/pip/http' or its parent directory is not owned by the current user and the cache has been disabled. Please check the permissions and owner of that directory. If executing pip with sudo, you may want sudo's -H flag.
+The directory '~/.cache/pip' or its parent directory is not owned by the current user and caching wheels has been disabled. check the permissions and owner of that directory. If executing pip with sudo, you may want sudo's -H flag.
 Collecting python-tds (from -r requirements.txt (line 1))
   Downloading https://files.pythonhosted.org/packages/5a/8a/d2f56210011f76616ff1673f3a4d77b80f4092de0c7e6207e66ad7fe124d/python-tds-1.9.1.tar.gz (74kB)
     100% |████████████████████████████████| 81kB 325kB/s
@@ -74,7 +74,7 @@ You are using pip version 8.1.1, however version 9.0.3 is available.
 You should consider upgrading via the 'pip install --upgrade pip' command.
 machine:~/project$ snyk test
 
-Testing /home/CIT/gustavomf/project...
+Testing ~/project...
 ✗ High severity vulnerability found on requests@2.9.1
 - desc: HTTP Request Redirection
 - info: https://snyk.io/vuln/SNYK-PYTHON-REQUESTS-40470
