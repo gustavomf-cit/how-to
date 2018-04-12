@@ -6,7 +6,7 @@
 curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > microsoft.gpg
 sudo mv microsoft.gpg /etc/apt/trusted.gpg.d/microsoft.gpg
 sudo sh -c 'echo "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main" > /etc/apt/sources.list.d/vscode.list'
-sudo apt-get update
+sudo apt-get update -y
 sudo apt-get install -y code
 ```
 
@@ -17,6 +17,7 @@ sudo apt install -y python3 python3-dev python3-pip
 sudo apt install -y freetds-dev freetds-bin freetds-common
 sudo pip3 install yapf autopep8 pylint flake8
 sudo pip3 install pytest pytest-cov requests python-dateutil
+sudo pip3 install python-tds pymssql ujson
 ```
 
 ## vscode config example
@@ -70,9 +71,13 @@ code --install-extension robertohuertasm.vscode-icons
 code --install-extension azaugg.vscode-python-docstring
 code --install-extension DotJoshJohnson.xml
 code --install-extension codezombiech.gitignore
+code --install-extension eamodio.gitlens
+
 ```
 
 ## vscode key bind example for generate def docs ... google style
+
+keybindings.json
 
 ```json
 [
