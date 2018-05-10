@@ -7,24 +7,30 @@ from kubernetes.client import CoreV1Api
 config.load_kube_config()
 api = CoreV1Api()
 
-exec_command = ['/bin/sh', '-c', 'ls', '-la']
+name = 'ipodname-0'
 
-name = 'podname'
+exec_command = ['/bin/sh', '-c', 'ls -la']
 
 
-exec_command = ['/bin/sh']
 resp = stream(api.connect_get_namespaced_pod_exec, name, 'default',
               command=exec_command,
               stderr=True, stdin=True,
               stdout=True, tty=False,
               _preload_content=False)
 
-if resp.is_open():
-    resp.write_stdin('ls -la\n')
-    while resp.is_open():
-        resp.update(timeout=1)
-        if resp.peek_stdout():
-            print(resp.read_stdout())
-            break
+txt_buffer = ''
+
+while resp.is_open():
+    resp.update(timeout=1)
+    if resp.peek_stdout():
+        out = resp.read_stdout()
+        print("bytes received: %s" % len(out))
+        txt_buffer = out
+        break
+    if resp.peek_stderr():
+        print("STDERR: %s" % resp.read_stderr())
+
+resp.close()
+print(txt_buffer)
 
 ```
